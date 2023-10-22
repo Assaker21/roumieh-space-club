@@ -3,28 +3,21 @@ import ReactPlayer from "react-player";
 import Draggable from "react-draggable";
 
 function Home() {
+  function preventDefault(e) {
+    e.preventDefault();
+    console.log("here too");
+  }
+
   return (
     <div className="home">
       <section className="section landing-section">
         <div className="landing-section-container">
           <Draggable
             onStart={() => {
-              window.addEventListener(
-                "touchmove",
-                (e) => {
-                  e.preventDefault();
-                },
-                { passive: false }
-              );
+              window.addEventListener("touchmove", preventDefault, { passive: false });
             }}
             onStop={() => {
-              window.removeEventListener(
-                "touchmove",
-                (e) => {
-                  e.preventDefault();
-                },
-                { passive: false }
-              );
+              window.removeEventListener("touchmove", preventDefault, { passive: false });
             }}
           >
             <img src="/images/astronaut cartoon 1024.png" alt="" className="landing-section-image" />
