@@ -1,5 +1,5 @@
 .background {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100vw;
   height: 100vh;
@@ -8,8 +8,8 @@
   .background-overlay {
     top: 0;
     position: absolute;
-    background-color: var(--background-color);
-    opacity: 0.8;
+    background-color: rgba(0, 0, 0, 0.605);
+    /*opacity: 0.6;*/
     pointer-events: none;
     width: 100vw;
     height: 100vh;

@@ -15,6 +15,8 @@
     "@types/three": "^0.157.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-draggable": "^4.4.6",
+    "react-player": "^2.13.0",
     "sass": "^1.69.4",
     "three": "^0.157.0"
   },

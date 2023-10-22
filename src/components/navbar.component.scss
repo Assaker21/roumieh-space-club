@@ -1,18 +1,29 @@
 .navbar {
   width: calc(100% - 64px);
   padding: 0 32px;
-  height: 61px;
-  position: relative;
+  height: 60px;
+  position: fixed;
 
-  background-color: #0000006e;
-  backdrop-filter: blur(2px);
+  background-color: #00000087;
+  backdrop-filter: blur(5px);
 
-  border-bottom: 1px solid #262626;
+  /*border-bottom: 1px solid #262626;*/
+  box-shadow: 0px 1px 0 var(--border-color);
 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  z-index: 50;
+
+  transition: var(--transition);
+
+  &.start {
+    box-shadow: none;
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+  }
 
   .title {
     overflow: visible;
@@ -31,7 +42,7 @@
 
     .menu-link {
       height: 36px;
-      border-radius: 8px;
+      border-radius: var(--border-radius);
       font-size: 14px;
       font-weight: 400;
       padding: 0 12px;
@@ -49,7 +60,7 @@
 
     .join-button {
       height: 36px;
-      border-radius: 8px;
+      border-radius: var(--border-radius);
       font-size: 14px;
       font-weight: 400;
       padding: 0 12px;
@@ -67,5 +78,113 @@
         opacity: 0.8;
       }
     }
+
+    .ham-button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+
+      .bx {
+        font-size: 36px;
+        color: var(--text-color);
+      }
+    }
   }
+
+  @media only screen and (max-width: 350px) {
+    .title {
+      font-size: 18px;
+    }
+
+    .menu-links {
+      .ham-button {
+        .bx {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+
+.narrow-navbar {
+  position: fixed;
+
+  width: calc(100vw - 64px);
+  padding: 0 32px;
+
+  height: 100vh;
+  background-color: #000000e6;
+  backdrop-filter: blur(15px);
+
+  top: 0;
+  opacity: 1;
+
+  z-index: 49;
+  pointer-events: all;
+
+  transition: all 0.3s ease-in;
+
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+    top: 0;
+    height: 60px;
+
+    .menu-links {
+      opacity: 0;
+    }
+  }
+
+  .menu-links {
+    margin-top: 84px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 8px;
+
+    list-style: none;
+
+    .menu-link {
+      height: 36px;
+      font-size: 24px;
+      font-weight: 500;
+      width: 100%;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      border: none;
+
+      transition: var(--transition);
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+
+    .join-button {
+      height: 36px;
+      border-radius: var(--border-radius);
+      font-size: 18px;
+      font-weight: 400;
+      padding: 0 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--text-color);
+      color: var(--background-color);
+      border: none;
+      margin-top: 12px;
+
+      transition: var(--transition);
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.navbar-offset {
+  height: 60px;
 }
