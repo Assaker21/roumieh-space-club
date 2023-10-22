@@ -1,0 +1,17 @@
+.background {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background-color);
+
+  .background-overlay {
+    top: 0;
+    position: absolute;
+    background-color: var(--background-color);
+    opacity: 0.8;
+    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+  }
+}
