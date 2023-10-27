@@ -7,19 +7,18 @@ function Article3DModel() {
   const material = useTexture({
     map: "/textures/earth.jpg",
     displacementMap: "/textures/earthbump_new.jpg",
-    bumpMap: "/textures/earthbump_new.jpg",
-    emissiveMap: "/textures/earthspec1k.jpg"
+    bumpMap: "/textures/earthbump_new.jpg"
   });
 
   const cloudMaterial = useTexture({
-    map: "/textures/earthCloud_new.png"
+    map: "/textures/earthCloud.png"
   });
 
   return (
     <mesh>
       <mesh position={[0, 0, 0]}>
-        <sphereGeometry args={[2.5, 64, 64]} />
-        <meshPhongMaterial bumpScale={20} displacementScale={10} roughness={0.5} {...material} />
+        <sphereGeometry args={[2.5, 48, 48]} />
+        <meshPhongMaterial bumpScale={20} displacementScale={20} roughness={0.5} {...material} />
       </mesh>
       <mesh>
         <sphereGeometry args={[2.52, 32, 32]} />
@@ -27,7 +26,7 @@ function Article3DModel() {
       </mesh>
       <ambientLight intensity={2} />
       {/*<pointLight position={[2.5, 2.5, 2.5]} intensity={20} />*/}
-      <OrbitControls autoRotateSpeed={2} autoRotate={true} enablePan={false} />
+      <OrbitControls autoRotateSpeed={2} autoRotate={true} enablePan={false} enableZoom={false} />
       {/*<Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={0} />*/}
     </mesh>
   );

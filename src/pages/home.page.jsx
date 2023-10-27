@@ -80,20 +80,8 @@ function Home() {
           </div>
           <div className="past-activities-container">
             <div className="past-activity-container">
-              <div className="past-activity-info">
-                <div className="past-activity-name">Stargazing night</div>
-                <div className="past-activity-location">Jbeil</div>
-                <div className="past-activity-date">21 09 2002</div>
-                <div className="past-activity-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, numquam molestiae consectetur esse debitis voluptate incidunt quaerat vel laudantium. Magni explicabo adipisci sit at dolorem quas perspiciatis asperiores eligendi culpa!</div>
-              </div>
               <div className="past-activity-images">
-                <img src="/images/event.jpeg" alt="" className="past-activity-image" />
-              </div>
-            </div>
-
-            <div className="past-activity-container">
-              <div className="past-activity-images">
-                <img src="/images/event.jpeg" alt="" className="past-activity-image" />
+                <img loading="lazy" src="/images/event.jpeg" alt="" className="past-activity-image" />
               </div>
               <div className="past-activity-info">
                 <div className="past-activity-name">Stargazing night</div>
@@ -104,14 +92,26 @@ function Home() {
             </div>
 
             <div className="past-activity-container">
+              <div className="past-activity-images">
+                <img loading="lazy" src="/images/event.jpeg" alt="" className="past-activity-image" />
+              </div>
               <div className="past-activity-info">
                 <div className="past-activity-name">Stargazing night</div>
                 <div className="past-activity-location">Jbeil</div>
                 <div className="past-activity-date">21 09 2002</div>
                 <div className="past-activity-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, numquam molestiae consectetur esse debitis voluptate incidunt quaerat vel laudantium. Magni explicabo adipisci sit at dolorem quas perspiciatis asperiores eligendi culpa!</div>
               </div>
+            </div>
+
+            <div className="past-activity-container">
               <div className="past-activity-images">
-                <img src="/images/event.jpeg" alt="" className="past-activity-image" />
+                <img loading="lazy" src="/images/event.jpeg" alt="" className="past-activity-image" />
+              </div>
+              <div className="past-activity-info">
+                <div className="past-activity-name">Stargazing night</div>
+                <div className="past-activity-location">Jbeil</div>
+                <div className="past-activity-date">21 09 2002</div>
+                <div className="past-activity-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, numquam molestiae consectetur esse debitis voluptate incidunt quaerat vel laudantium. Magni explicabo adipisci sit at dolorem quas perspiciatis asperiores eligendi culpa!</div>
               </div>
             </div>
           </div>

@@ -4,12 +4,14 @@ import Home from "./pages/home.page";
 import Events from "./pages/events.page";
 import History from "./pages/history.page";
 import Articles from "./pages/articles.page";
+import Spinner from "./components/spinner.component";
+
 import { Suspense } from "react";
 
 function App() {
   return (
     <>
-      <Suspense>
+      <Suspense fallback={<Spinner />}>
         <Background />
         <Navbar />
         <Home />
