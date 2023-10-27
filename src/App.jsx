@@ -11,12 +11,10 @@ import { Suspense } from "react";
 function App() {
   return (
     <>
-      <Suspense fallback={<Spinner />}>
-        <Background />
-        <Navbar />
-        <Home />
-        <Articles />
-      </Suspense>
+      <Background />
+      <Navbar />
+      <Home />
+      <Articles />
     </>
   );
 }
