@@ -26,6 +26,27 @@ function Navbar() {
     };
   }, []);
 
+  function preventDefault(e) {
+    e.preventDefault();
+  }
+
+  function disableScroll() {
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+    window.onscroll = function () {
+      window.scrollTo(scrollLeft, scrollTop);
+    };
+  }
+
+  function enableScroll() {
+    window.onscroll = function () {};
+  }
+
+  useEffect(() => {
+    if (openNavbar) disableScroll();
+    else enableScroll();
+  }, [openNavbar]);
+
   return (
     <>
       <nav className={"navbar" + (scroll == 0 || openNavbar ? " start" : "")}>
